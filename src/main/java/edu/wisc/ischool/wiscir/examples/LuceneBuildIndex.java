@@ -33,15 +33,15 @@ import java.util.zip.GZIPInputStream;
  */
 
 public class LuceneBuildIndex {
-	// Her bir .java dosyasından tek tek path değiştirmek yerine,
-	// sadece bu alttaki iki satırı değiştirmek yeterlidir.
-	// Diğer dosyalarda buradaki değişkenleri kullanarak gerekli işlemleri yapmaktadır.
+	// Her bir .java dosyasindan tek tek path degistirmek yerine,
+	// sadece bu alttaki iki satiri degistirmek yeterlidir.
+	// Diger dosyalarda buradaki degiskenleri kullanarak gerekli islemleri yapmaktadir.
 	public static String path_to_corpus =  "D:/Eclipse/ws/LuceneTutorial/example_corpus.gz";
 	public static String path_to_index = "D:/Eclipse/ws/LuceneTutorial/example_index_lucene";
 	
 	
-	// Fonksiyon bir Similarity objesi almaktadır
-	// Bu Similarity objesi, main fonksiyonda oluşturulan DFISimilarity objesidir
+	// Fonksiyon bir Similarity objesi almaktadir
+	// Bu Similarity objesi, main fonksiyonda olusturulan DFISimilarity objesidir
 	public static void generate_index_with_similarity(Similarity similarity) {
 		try {
 
@@ -144,15 +144,15 @@ public class LuceneBuildIndex {
 	
     public static void main( String[] args ) {
     	/*
-    	 * Kodda yapılacak değişikliği en aza indirmek amacıyla bu şekilde bir güncelleme yaptım
+    	 * Kodda yapilacak degisikligi en aza indirmek amaciyla bu sekilde bir guncelleme yaptim
     	 * 
-    	 * 1) Öncelikte 3 adet Independence objesini kullanararak DFISimilarity objelerini oluşturuyorum.
-    	 * 2) Ardından oluşturduğum ilk DFISimilarity objesini ve 'generate_index_with_similarity' fonksiyonunu kullanarak bir indeks oluşturuyorum.
-    	 * 3) Bu oluşan indeksi 'search_with_param' ile kullanarak ilgili indeks için bir sorgulama gerçekleşitiriyorum
-    	 * 4) Ardından bu işlem sonunda ekrana gerekli çıktıları bastırıp işlemi tamamlıyorum.
-    	 * 5) 4. adım tamamlandıktan sonra sıradaki DFISimilarity objesi ile 2. adımdan devam ediyorum.
+    	 * 1) Oncelikte 3 adet Independence objesini kullanararak DFISimilarity objelerini olusturuyorum.
+    	 * 2) Ardindan olusturdugum ilk DFISimilarity objesini ve 'generate_index_with_similarity' fonksiyonunu kullanarak bir indeks olusturuyorum.
+    	 * 3) Bu olusan indeksi 'search_with_param' ile kullanarak ilgili indeks icin bir sorgulama gerceklesitiriyorum
+    	 * 4) Ardindan bu islem sonunda ekrana gerekli ciktilari bastirip islemi tamamliyorum.
+    	 * 5) 4. adim tamamlandiktan sonra siradaki DFISimilarity objesi ile 2. adimdan devam ediyorum.
     	 * 
-    	 * Bu şekilde kodda herhangi bir değişiklik yapmadan veya veri girişi olmadan, kolayca 3 model için gerekli çıktıları bastırabiliyorum.
+    	 * Bu sekilde kodda herhangi bir degisiklik yapmadan veya veri girisi olmadan, kolayca 3 model icin gerekli ciktilari bastirabiliyorum.
     	 */
     	
         DFISimilarity dfis_standard = new DFISimilarity(new IndependenceStandardized());
