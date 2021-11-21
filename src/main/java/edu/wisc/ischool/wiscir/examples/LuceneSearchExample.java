@@ -18,17 +18,17 @@ import org.apache.lucene.search.similarities.Similarity;
 import java.io.File;
 
 /**
- * This is an example of accessing corpus statistics and corpus-level term statistics.
+ * This is an changed example of accessing corpus statistics and corpus-level term statistics.
  *
- * @author Jiepu Jiang (jiepu.jiang@wisc.edu)
- * @version 2021-04-12
+ * @editor Ozan Koyuk  N20230337
+ * @version 2021-11-21
  */
 public class LuceneSearchExample {
 
 	/*
-	 * Oluşturmuş olduğum fonksiyon bir adet Similarity objesi almaktadır.
-	 * Bu Similarity objesi, main fonksiyonumda oluşturulan DFISimilarity objeleridir.
-	 * Bu DFISimilarity objeleri sıra ile bu fonksiyona parametre olarak gelmektedir.
+	 * Olusturmus oldugum fonksiyon bir adet Similarity objesi almaktadir.
+	 * Bu Similarity objesi, main fonksiyonumda olusturulan DFISimilarity objeleridir.
+	 * Bu DFISimilarity objeleri sira ile bu fonksiyona parametre olarak gelmektedir.
 	 */
 	public static void search_with_param(Similarity similarity) {
 		try {
@@ -75,8 +75,8 @@ public class LuceneSearchExample {
 
             
             /*
-             * Çıkan skor değerlerini daha iyi kavrayabilmek için, bu skor değerlerinin normalize edilmiş hallerinide hesaplayıp
-             * ilgili konsol çıktısına eklemekteyim.
+             * Cikan skor degerlerini daha iyi kavrayabilmek icin, bu skor degerlerinin normalize edilmis hallerinide hesaplayip
+             * ilgili konsol ciktisina eklemekteyim.
              */
             System.out.printf( "%-10s%-15s%-10s%-15s%s\n", "Rank", "DocNo", "Score", "Normalized", "Title" );
             int rank = 1;
@@ -84,7 +84,7 @@ public class LuceneSearchExample {
             double _max = -999.0;
             
             
-            // Burada tüm dokümanlar arasındaki minimum ve maksimum skor değerlerini buluyorum.
+            // Burada tum dokumanlar arasindaki minimum ve maksimum skor degerlerini buluyorum.
             for(ScoreDoc scoreDoc: docs.scoreDocs){
             	if(scoreDoc.score > _max)
             		_max = scoreDoc.score;
@@ -94,7 +94,7 @@ public class LuceneSearchExample {
             }
             
             for ( ScoreDoc scoreDoc : docs.scoreDocs ) {
-            	// Explain fonksiyonunu kullanarak ilgili query ve dökümanın hesaplama özetini kontrol ediyorum.
+            	// Explain fonksiyonunu kullanarak ilgili query ve dokumanin hesaplama ozetini kontrol ediyorum.
             	// System.out.println(searcher.explain(query, scoreDoc.doc));
                 int docid = scoreDoc.doc;
                 double score = scoreDoc.score;
